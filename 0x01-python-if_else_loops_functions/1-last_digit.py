@@ -4,7 +4,7 @@ import random
 number = random.randint(-10000, 10000)
 
 last_digit = abs(number) % 10
-last_digit *= -1 if number < 0 else 1  # Preserve the sign of the original number
+last_digit *= -1 if number < 0 else 1  # keeps the sign
 
 string = "Last digit of {} is {}".format(number, last_digit)
 
