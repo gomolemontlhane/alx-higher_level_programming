@@ -11,6 +11,7 @@ def fizzbuzz():
         else:
             print(i, end=' ')
 
+
 if __name__ == "__main__":
     fizzbuzz()
     print()  # Print a new line at the end
