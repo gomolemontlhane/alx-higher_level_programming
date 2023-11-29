@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-
 def uppercase(str):
     for char in str:
+        uppercase_char = char
         if 'a' <= char <= 'z':
-            print("{}".format(chr(ord(char) - 32)), end='')
-        else:
-            print("{}".format(char), end='')
-
-    print()  # Print a new line at the end
+            uppercase_char = chr(ord(char) - ord('a') + ord('A'))
+        print("{}".format(uppercase_char), end="")
+    print()
 
 if __name__ == "__main__":
     uppercase("best")
