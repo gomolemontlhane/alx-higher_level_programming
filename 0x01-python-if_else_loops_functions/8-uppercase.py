@@ -7,6 +7,7 @@ def uppercase(str):
         print("{}".format(uppercase_char), end="")
     print()
 
+
 if __name__ == "__main__":
     uppercase("best")
     uppercase("Best School 98 Battery street")
