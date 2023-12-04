@@ -10,4 +10,3 @@ if __name__ == "__main__":
     idx = 3
     result = element_at(my_list, idx)
     print("Element at index {:d} is {}".format(idx, result))
-
