@@ -26,15 +26,15 @@ To test these scripts, you can use the provided `main` files. For example:
 # ... and so on
 ```
 ## Requirements
-Allowed editors: vi, vim, emacs
-All files will be interpreted/compiled on Ubuntu 20.04 LTS using Python3 (version 3.8.5)
-All files should end with a new line
-The first line of all files should be exactly #!/usr/bin/python3
-A README.md file at the root of the folder is mandatory
-Code should use pycodestyle (version 2.8.*)
-All files must be executable
-The length of your files will be tested using wc
-All modules, classes, and functions should have proper documentation
+- Allowed editors: vi, vim, emacs
+- All files will be interpreted/compiled on Ubuntu 20.04 LTS using Python3 (version 3.8.5)
+- All files should end with a new line
+- The first line of all files should be exactly #!/usr/bin/python3
+- A README.md file at the root of the folder is mandatory
+- Code should use pycodestyle (version 2.8.*)
+- All files must be executable
+- The length of your files will be tested using wc
+- All modules, classes, and functions should have proper documentation
 
 ##Author
 Gomolemo Ntlhane
