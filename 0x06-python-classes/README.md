@@ -36,5 +36,5 @@ To test these scripts, you can use the provided `main` files. For example:
 - The length of your files will be tested using wc
 - All modules, classes, and functions should have proper documentation
 
-##Author
+## Author
 Gomolemo Ntlhane
