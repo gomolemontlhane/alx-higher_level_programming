@@ -103,5 +103,40 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """De
+        """Delete an instance of Rectangle and print a message."""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """Determine the bigger rectangle based on the area.
+
+        Args:
+            rect_1 (Rectangle): The first rectangle.
+            rect_2 (Rectangle): The second rectangle.
+
+        Returns:
+            Rectangle: The bigger or equal rectangle.
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+        area_1 = rect_1.area()
+        area_2 = rect_2.area()
+
+        return rect_1 if area_1 >= area_2 else rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """Create a new Rectangle instance with equal width and height.
+
+        Args:
+            size (int): The size of the square.
+
+        Returns:
+            Rectangle: A new Rectangle instance representing a square.
+        """
+        return cls(size, size)
 
