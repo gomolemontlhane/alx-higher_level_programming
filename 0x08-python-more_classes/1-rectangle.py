@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module to define a Rectangle class"""
 
+
 class Rectangle:
     """Class representing a rectangle.
 
