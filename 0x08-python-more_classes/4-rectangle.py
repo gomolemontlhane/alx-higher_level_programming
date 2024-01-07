@@ -4,9 +4,6 @@
 
 class Rectangle:
     """Defines a rectangle."""
-    
-    number_of_instances = 0
-    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize a rectangle.
@@ -17,7 +14,6 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -87,7 +83,7 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join([str(self.print_symbol) * self.__width for _ in range(self.__height)])
+        return "\n".join([str("#") * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
         """Return a string representation of the rectangle for eval().
@@ -96,30 +92,4 @@ class Rectangle:
             str: The string representation of the rectangle.
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
-
-    def __del__(self):
-        """Delete an instance of Rectangle and print a message."""
-        print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
-
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        """Determine the bigger rectangle based on the area.
-
-        Args:
-            rect_1 (Rectangle): The first rectangle.
-            rect_2 (Rectangle): The second rectangle.
-
-        Returns:
-            Rectangle: The bigger or equal rectangle.
-        """
-        if not isinstance(rect_1, Rectangle):
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 must be an instance of Rectangle")
-
-        area_1 = rect_1.area()
-        area_2 = rect_2.area()
-
-        return rect_1 if area_1 >= area_2 else rect_2
 
