@@ -1,17 +1,12 @@
 #!/usr/bin/python3
-"""Module to define a Rectangle class"""
+"""Module for the Rectangle class."""
 
 
 class Rectangle:
-    """Class representing a rectangle.
-
-    Attributes:
-        width (int): The width of the rectangle.
-        height (int): The height of the rectangle.
-    """
+    """Defines a rectangle."""
 
     def __init__(self, width=0, height=0):
-        """Initialize a new Rectangle.
+        """Initialize a rectangle.
 
         Args:
             width (int): The width of the rectangle.
