@@ -127,4 +127,3 @@ class Rectangle:
         area_2 = rect_2.area()
 
         return rect_1 if area_1 >= area_2 else rect_2
-
