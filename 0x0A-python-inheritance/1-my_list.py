@@ -6,6 +6,9 @@ Module that defines the MyList class.
 class MyList(list):
     """
     MyList class, inherits from the list class.
+
+    Public instance method:
+    - def print_sorted(self): prints the list in ascending order.
     """
 
     def print_sorted(self):
