@@ -1,7 +1,12 @@
 #!/usr/bin/python3
+"""
+Module that defines the BaseGeometry class.
+"""
 
 class BaseGeometry:
-    """An empty class representing the base geometry."""
+    """
+    Empty class representing the base geometry.
+    """
     pass
 
 if __name__ == "__main__":
