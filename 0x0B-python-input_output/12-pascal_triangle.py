@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Pascal's Triangle module"""
 
+
 def pascal_triangle(n):
     """Returns Pascal's Triangle of depth n"""
     if n <= 0:
