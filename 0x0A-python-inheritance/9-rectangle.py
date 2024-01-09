@@ -5,6 +5,7 @@ Module that defines the Rectangle class, which inherits from BaseGeometry.
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """
     Rectangle class that inherits from BaseGeometry.
@@ -25,7 +26,6 @@ class Rectangle(BaseGeometry):
         Computes and returns the area of the rectangle.
         """
         return self.__width * self.__height
-
 
     def __str__(self):
         """

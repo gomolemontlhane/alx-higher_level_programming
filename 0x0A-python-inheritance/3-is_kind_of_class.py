@@ -3,6 +3,7 @@
 Module that defines the is_kind_of_class function.
 """
 
+
 def is_kind_of_class(obj, a_class):
     """
     Check if the object is an instance of, or if the object is an instance
@@ -26,4 +27,3 @@ if __name__ == "__main__":
         print("{} comes from {}".format(a, float.__name__))
     if is_kind_of_class(a, object):
         print("{} comes from {}".format(a, object.__name__))
-
