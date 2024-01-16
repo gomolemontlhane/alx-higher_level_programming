@@ -5,7 +5,17 @@ from models.base import Base
 
 
 class TestBase(unittest.TestCase):
-    """Test cases for the Base class."""
+    """Test cases for the Base class.
+
+    Methods:
+        test_init(self): Test the initialization of Base.
+        test_nb_objects(self): Test the __nb_objects attribute.
+        test_custom_id(self): Test creating Base instance with a custom id.
+        test_to_dict(self): Test the to_dict method.
+        test_to_json_string(self): Test the to_json_string method.
+        test_from_json_string(self): Test the from_json_string method.
+        test_create(self): Test the create method.
+    """
 
     def test_init(self):
         """Test the initialization of Base."""
