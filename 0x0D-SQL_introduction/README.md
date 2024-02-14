@@ -40,4 +40,24 @@ Example:
 
 ```bash
 cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
+```
+## Installation
+
+To run these scripts, you need to have MySQL installed on your system. If you haven't installed MySQL yet, follow these steps:
+
+1. Update package index:
+
+```bash
+sudo apt update
+```
+1. Install MySQL server:
+
+```bash
+sudo apt install mysql-server
+```
+1. Start MySQL service:
+
+```bash
+sudo service mysql start
+```
 
