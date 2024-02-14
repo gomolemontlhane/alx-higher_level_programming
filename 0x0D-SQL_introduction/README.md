@@ -60,4 +60,28 @@ sudo apt install mysql-server
 ```bash
 sudo service mysql start
 ```
+# MySQL Server Connection
+
+## Connecting to MySQL Server on Ubuntu 20.04
+
+To connect to the MySQL server on Ubuntu 20.04 using the command line, follow these steps:
+
+1. Open your terminal.
+
+2. Use the following command to connect to the MySQL server:
+    ```bash
+    mysql -u username -p -h localhost
+    ```
+    Replace `username` with your MySQL username.
+
+    If you're connecting to a remote MySQL server, replace `localhost` with the IP address or hostname of the server.
+
+3. After running the command, you'll be prompted to enter your MySQL password.
+
+4. Once you've entered the correct password, you'll be connected to the MySQL server.
+
+### Example:
+
+```bash
+mysql -u root -p -h localhost
 
