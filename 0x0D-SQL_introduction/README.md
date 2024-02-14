@@ -41,7 +41,7 @@ Example:
 ```bash
 cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
 ```
-## Installation
+## MySQL Installation
 
 To run these scripts, you need to have MySQL installed on your system. If you haven't installed MySQL yet, follow these steps:
 
