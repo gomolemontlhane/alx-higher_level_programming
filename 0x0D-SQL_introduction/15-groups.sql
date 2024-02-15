@@ -1,3 +1,3 @@
 -- List number of records for each score
-SELECT score, COUNT(*) AS number FROM hbtn_0c_0.second_table GROUP BY score ORDER BY number DESC;
+SELECT score, COUNT(*) AS number FROM second_table GROUP BY score ORDER BY number DESC;
 
