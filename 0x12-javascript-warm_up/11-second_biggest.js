@@ -6,4 +6,3 @@ if (process.argv.length <= 3) {
   const sortedNumbers = numbers.sort((a, b) => a - b);
   console.log(sortedNumbers[sortedNumbers.length - 2]);
 }
-
