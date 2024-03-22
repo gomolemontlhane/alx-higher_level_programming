@@ -1,32 +1,33 @@
 #!/usr/bin/python3
 """
-Script that takes in an argument and displays all values in the states
-table of the database hbtn_0e_0_usa where name matches the argument.
+Script that lists all states with a name starting with N (upper N) from the
+database hbtn_0e_0_usa.
 """
 
-import sys
 import MySQLdb
+import sys
 
 if __name__ == "__main__":
     # Connect to MySQL database
-    conn = MySQLdb.connect(host="localhost", port=3306,
-                           user=sys.argv[1], passwd=sys.argv[2],
-                           db=sys.argv[3], charset="utf8")
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3]
+    )
 
-    # Create cursor object
-    cur = conn.cursor()
+    # Create cursor to execute queries
+    cur = db.cursor()
 
-    # Execute SQL query
-    cur.execute("SELECT * FROM states WHERE name=%s ORDER BY id ASC", (sys.argv[4],))
+    # Execute query
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
-    # Fetch all rows
-    query_rows = cur.fetchall()
-
-    # Print query results
-    for row in query_rows:
+    # Fetch all rows and print
+    for row in cur.fetchall():
         print(row)
 
-    # Close cursor and connection
+    # Close cursor and database
     cur.close()
-    conn.close()
+    db.close()
 
