@@ -26,4 +26,3 @@ if __name__ == "__main__":
 
     # Print the new state's id after creation
     print(new_state.id)
-
