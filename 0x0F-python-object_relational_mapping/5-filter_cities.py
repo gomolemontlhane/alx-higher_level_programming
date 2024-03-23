@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that lists all cities from the database hbtn_0e_4_usa that match a state name.
+Script that lists all cities from the database hbtn_0e_4_usa
+that match a state name.
 """
 
 import MySQLdb
@@ -37,4 +38,3 @@ if __name__ == "__main__":
     # Close cursor and database
     cur.close()
     db.close()
-    

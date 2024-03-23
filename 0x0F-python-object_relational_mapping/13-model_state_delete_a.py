@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Deletes State objects from the database hbtn_0e_6_usa that contain the letter 'a'"""
+"""Deletes State objects from the database hbtn_0e_6_usa
+that contain the letter 'a'
+"""
 
 import sys
 from sqlalchemy import create_engine
