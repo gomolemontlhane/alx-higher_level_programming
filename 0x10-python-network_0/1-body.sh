@@ -1,8 +1,9 @@
 #!/bin/bash
-# Sends a GET request to a URL and displays the body of the response for a 200 status code
-curl -s "$1" -X GET -o /dev/null -w "%{http_code}" | {
-    read status_code
-    if [ $status_code -eq 200 ]; then
+# Sends a GET request to the URL and displays the body of the response if status code is 200
+curl -sL -w "%{http_code}" -o /dev/null "$1" | {
+    read -r status
+    if [[ $status == 200 ]]; then
         curl -s "$1"
     fi
 }
+
