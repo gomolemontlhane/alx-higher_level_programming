@@ -13,7 +13,8 @@ def find_peak(list_of_integers):
         int: A peak integer.
 
     Complexity:
-        O(log(n)) - This algorithm uses a binary search approach to find the peak.
+        O(log(n)) - This algorithm uses a binary search
+        approach to find the peak.
     """
     if not list_of_integers:
         return None
@@ -29,4 +30,3 @@ def find_peak(list_of_integers):
             high = mid
 
     return list_of_integers[low]
-
