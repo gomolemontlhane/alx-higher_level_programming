@@ -1,12 +1,17 @@
 #!/usr/bin/node
-// Status Of Get request
 
 const request = require('request');
+
+// Get the URL from the command-line arguments
 const url = process.argv[2];
-request.get(url, function (error, response) {
+
+// Make a GET request to the specified URL
+request(url, (error, response) => {
   if (error) {
-    console.log(error);
-  } else {
-    console.log('code:' + ' ' + response.statusCode);
+    console.error(error);
+    return;
   }
+  
+  // Print the status code
+  console.log(`code: ${response.statusCode}`);
 });
