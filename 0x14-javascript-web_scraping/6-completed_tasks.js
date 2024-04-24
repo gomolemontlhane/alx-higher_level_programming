@@ -1,17 +1,30 @@
 #!/usr/bin/node
-// lorem ipsum
-
 const request = require('request');
-const fs = require('fs');
 
-request.get(process.argv[2], (error, response, body) => {
+// Get the API URL from the command line arguments
+const apiUrl = process.argv[2];
+
+// Make a GET request to the provided API URL
+request.get(apiUrl, (error, response, body) => {
   if (error) {
-    console.log(error);
-  } else {
-    fs.writeFile(process.argv[3], body, 'utf-8', (error) => {
-      if (error) {
-        console.log(error);
-      }
-    });
+    console.error(error);
+    return;
   }
+  const todos = JSON.parse(body);
+
+  // Initialize an object to store the count of completed tasks by user ID
+  const completedTasksByUser = {};
+
+  // Count the completed tasks for each user
+  todos.forEach(todo => {
+    if (todo.completed) {
+      if (completedTasksByUser[todo.userId]) {
+        completedTasksByUser[todo.userId]++;
+      } else {
+        completedTasksByUser[todo.userId] = 1;
+      }
+    }
+  });
+
+  console.log(completedTasksByUser);
 });
