@@ -1,33 +1,17 @@
 #!/usr/bin/node
+// lorem ipsum
 
 const request = require('request');
+const fs = require('fs');
 
-const apiUrl = process.argv[2];
-
-request(apiUrl, function (error, response, body) {
-  if (!error && response.statusCode === 200) {
-    try {
-      const todos = JSON.parse(body);
-
-      const completed = {};
-
-      todos.forEach((todo) => {
-        if (todo.completed) {
-          if (completed[todo.userId] === undefined) {
-            completed[todo.userId] = 1;
-          } else {
-            completed[todo.userId]++;
-          }
-        }
-      });
-
-      const output = `{${Object.entries(completed).map(([key, value]) => ` '${key}': ${value}`).join(',\n ')} }`;
-
-      console.log(Object.keys(completed).length > 2 ? output : completed);
-    } catch (parseError) {
-      console.error('Error parsing JSON:', parseError);
-    }
+request.get(process.argv[2], (error, response, body) => {
+  if (error) {
+    console.log(error);
   } else {
-    console.error('Error:', error);
+    fs.writeFile(process.argv[3], body, 'utf-8', (error) => {
+      if (error) {
+        console.log(error);
+      }
+    });
   }
 });
