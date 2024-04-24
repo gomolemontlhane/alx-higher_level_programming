@@ -1,20 +1,10 @@
 #!/usr/bin/node
 
-const request = require('request');
+// Import the built-in Node.js 'fs' module
 const fs = require('fs');
 
-const url = process.argv[2];
-const filePath = process.argv[3];
+// Import the 'request' module
+const request = require('request');
 
-request(url, (error, response, body) => {
-  if (error) {
-    console.error(error);
-    return;
-  }
-  fs.writeFile(filePath, body, 'utf-8', (err) => {
-    if (err) {
-      console.log(err);
-      return;
-    }
-  });
-});
+// Use the 'request' module to perform an HTTP GET request to the URL
+request(process.argv[2]).pipe(fs.createWriteStream(process.argv[3]));

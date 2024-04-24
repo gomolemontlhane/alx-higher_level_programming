@@ -1,15 +1,13 @@
 #!/usr/bin/node
 
+// Import the 'request' module.
 const request = require('request');
 
-const movieId = process.argv[2];
-const apiUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
+// Construct the URL for the specific Star Wars film
+const url = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
 
-request(apiUrl, (error, response, body) => {
-  if (error) {
-    console.error(error);
-    return;
-  }
-  const movie = JSON.parse(body);
-  console.log(movie.title);
+// Use the 'request' module to perform an HTTP GET request to the constructed URL.
+request(url, function (error, response, body) {
+  // log title if successful, log error if not.
+  console.log(error || JSON.parse(body).title);
 });
